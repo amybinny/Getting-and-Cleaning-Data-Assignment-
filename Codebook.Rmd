@@ -1,0 +1,33 @@
+---
+title: "Getting and Cleaning Data Assignment"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Code Book
+
+This is a code book for tidy_data.txt created for this assignment. This contains human activity data of 30 subjects for various activtites which will be mentioned below.  
+
+## Variables functions
+
+1.  mean
+2.  standard deviation
+
+## Activity
+
+
+```{r pressure, echo=FALSE}
+read.table("activity_labels.txt")
+```
+
+## The tidy data contains following variables:
+
+
+```{r pressure1, echo=FALSE}
+features <- read.table("features.txt")
+variables <- features[grep("mean|std", features[,2]),]
+features[variables[,1],2]
+```
